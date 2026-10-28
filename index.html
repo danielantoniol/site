@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daniel Antoniol · Moon & surreal photography</title>
+<meta name="description" content="Daniel Antoniol, Rio de Janeiro: Moon, sky and surreal photography. Real photographs combined by hand, no AI. Images available for editorial, book, advertising and exhibition licensing.">
+<link rel="canonical" href="https://danielantoniol.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://danielantoniol.com/">
+<meta property="og:title" content="Daniel Antoniol · The Moon, within reach">
+<meta property="og:description" content="Surreal photographs built around the real Moon and sky. Combined by hand. No AI. Licensing for editorial, books, advertising and exhibitions.">
+<meta property="og:image" content="https://danielantoniol.com/og-image.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1218">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Daniel Antoniol","jobTitle":"Photographer","url":"https://danielantoniol.com/","image":"https://danielantoniol.com/og-image.jpg","address":{"@type":"PostalAddress","addressLocality":"Rio de Janeiro","addressCountry":"BR"},"sameAs":["https://www.instagram.com/daniel_antoniol/"]}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one night-sky column. Hero (text + signature image), catalogue grid with reference codes, method, press, licensing. Single dark look, chosen for night photography. */
+:root{
+  --night:#0f1218;
+  --dusk:#171c25;
+  --ink:#ece7dc;
+  --mute:#959caa;
+  --moon:#e8c36b;
+  --line:rgba(236,231,220,.12);
+  --display:"Gloock", "Iowan Old Style", Georgia, serif;
+  --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));}
+.wrap{max-width:1180px;margin:0 auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--moon);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.05}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moon)}
+p{margin:0}
+section{padding-block:clamp(56px,9vw,112px);border-top:1px solid var(--line)}
+
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px;flex-wrap:wrap}
+nav .name{font-family:var(--display);font-size:20px;text-decoration:none}
+nav ul{list-style:none;margin:0;padding:0;display:flex;gap:22px;flex-wrap:wrap}
+nav ul a{text-decoration:none;color:var(--mute);font-size:15px}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center;padding-block:clamp(24px,5vw,64px) clamp(56px,8vw,96px)}
+.hero > div{min-width:0;display:grid;gap:24px}
+.hero h1{font-size:clamp(52px,8.4vw,112px);letter-spacing:-.01em}
+.hero h1 em{font-style:normal;color:var(--moon)}
+.hero .lead{font-size:clamp(18px,1.8vw,21px);color:var(--ink);max-width:34ch;opacity:.92}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;font-family:var(--body)}
+.btn.primary{background:var(--moon);color:var(--night);border-color:var(--moon)}
+.btn:hover{border-color:var(--moon)}
+.hero figure{margin:0;position:relative}
+.hero figure img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:4px}
+.hero figcaption{font-family:var(--mono);font-size:12px;color:var(--mute);margin-top:10px;display:flex;justify-content:space-between;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:10px 28px;font-size:14px;color:var(--mute);padding-top:6px;border-top:1px solid var(--line)}
+.facts span{padding-top:12px}
+.facts b{color:var(--ink);font-weight:500}
+
+/* section heads */
+.head{display:flex;justify-content:space-between;align-items:end;gap:20px 40px;flex-wrap:wrap;margin-bottom:40px}
+.head > div{display:grid;gap:12px;min-width:0}
+.head h2{font-size:clamp(36px,5vw,60px)}
+.head p.note{color:var(--mute);max-width:40ch;font-size:15px}
+
+/* gallery */
+.grid{columns:3 300px;column-gap:18px}
+.plate{break-inside:avoid;margin:0 0 26px;cursor:zoom-in;display:block;width:100%;padding:0;border:0;background:none;color:inherit;text-align:left;font:inherit}
+.plate img{display:block;width:100%;height:auto;border-radius:3px;background:var(--dusk);transition:opacity .25s}
+.plate:hover img{opacity:.88}
+.plate .cap{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-top:10px}
+.plate .t{font-family:var(--display);font-size:20px;line-height:1.2}
+.plate .tag{display:block;margin-top:4px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--moon)}
+.plate .ref{font-family:var(--mono);font-size:12px;color:var(--mute);white-space:nowrap}
+.archive{margin-top:clamp(32px,5vw,56px);padding:clamp(22px,3vw,32px);border:1px solid var(--line);border-radius:6px;background:var(--dusk);display:grid;gap:14px;justify-items:start;max-width:720px}
+.archive p:not(.eyebrow){font-size:clamp(17px,1.6vw,19px)}
+
+/* method */
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.steps div{display:grid;gap:10px;align-content:start}
+.steps .n{font-family:var(--mono);font-size:12px;color:var(--moon);letter-spacing:.1em}
+.steps h3{font-size:26px}
+.steps p{color:var(--mute);font-size:16px}
+
+/* press */
+.press{list-style:none;margin:0;padding:0;display:grid}
+.press li{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,2fr) 150px 64px;gap:6px 28px;padding-block:20px;border-top:1px solid var(--line);align-items:baseline}
+.press .go{font-family:var(--mono);font-size:13px;color:var(--moon);text-decoration:none;justify-self:end}
+.press .go:hover{text-decoration:underline}
+.press li:last-child{border-bottom:1px solid var(--line)}
+.press .w{font-family:var(--display);font-size:24px}
+.press .d{color:var(--mute);font-size:16px}
+.press .y{font-family:var(--mono);font-size:13px;color:var(--mute);font-variant-numeric:tabular-nums}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,5vw,64px)}
+.about h2{font-size:clamp(36px,5vw,60px);margin-top:12px}
+.about-text{display:grid;gap:18px;max-width:62ch}
+blockquote{margin:12px 0 0;padding-left:20px;border-left:2px solid var(--moon);font-family:var(--display);font-size:clamp(22px,2.6vw,30px);line-height:1.25}
+blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-size:12px;font-style:normal;color:var(--mute);letter-spacing:.06em}
+/* tear sheets */
+.sheets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-bottom:40px}
+.sheets figure{margin:0;display:grid;gap:10px}
+.sheets img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:3px;display:block}
+.sheets figcaption{font-family:var(--mono);font-size:12px;color:var(--mute)}
+
+/* licensing */
+.lic{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,64px)}
+.lic > div{min-width:0;display:grid;gap:22px;align-content:start}
+.uses{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.uses li{background:var(--night);padding:18px;display:grid;gap:4px}
+.uses b{font-weight:600}
+.uses span{color:var(--mute);font-size:14px}
+.how{margin:0;padding-left:1.2em;display:grid;gap:8px;color:var(--ink)}
+.how li::marker{color:var(--moon);font-family:var(--mono)}
+.card{background:var(--dusk);border:1px solid var(--line);border-radius:6px;padding:26px;display:grid;gap:18px}
+.card label{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.email{font-size:clamp(20px,2.4vw,26px);font-family:var(--display);user-select:all;word-break:break-all}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+textarea{width:100%;min-height:150px;resize:vertical;background:var(--night);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:14px;font:15px/1.55 var(--body)}
+.status{font-size:14px;color:var(--moon);min-height:1.4em}
+
+footer{border-top:1px solid var(--line);padding-block:32px 48px;color:var(--mute);font-size:14px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* lightbox */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;width:100vw;height:100%;margin:0;color:var(--ink)}
+dialog::backdrop{background:rgba(8,10,14,.94)}
+.lb{height:100%;display:grid;grid-template-rows:1fr auto;gap:14px;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb .stage{min-height:0;display:flex;align-items:center;justify-content:center}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:3px}
+.lb .bar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;max-width:1180px;width:100%;margin:0 auto}
+.lb .bar .t{font-family:var(--display);font-size:22px}
+.lb .bar .ref{font-family:var(--mono);font-size:12px;color:var(--mute);margin-left:10px}
+.icon{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--dusk);color:var(--ink);font-size:18px;cursor:pointer}
+
+@media (max-width:860px){
+  .hero,.lic{grid-template-columns:1fr}
+  .hero{padding-block:8px 56px;gap:28px}
+  .hero > div{gap:18px}
+  .steps{grid-template-columns:1fr;gap:28px}
+  .about{grid-template-columns:1fr}
+  .press li{grid-template-columns:minmax(0,1fr) auto}
+  .press .d,.press .y{grid-column:1 / -1}
+  .press .go{grid-row:1;grid-column:2}
+}
+@media (max-width:520px){
+  body{font-size:16px}
+  .grid{columns:2 140px;column-gap:12px}
+  .plate .t{font-size:16px}
+  .uses{grid-template-columns:1fr}
+  .sheets{grid-template-columns:1fr}
+  nav ul{gap:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="name" href="#top">Daniel Antoniol</a>
+    <ul>
+      <li><a href="#work">Moon</a></li>
+      <li><a href="#surreal">Surreal</a></li>
+      <li><a href="#method">Method</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#published">Published</a></li>
+      <li><a href="#licensing">Licensing</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <p class="eyebrow">Moon, sky &amp; surreal photography &middot; Rio de Janeiro, Brazil</p>
+      <h1>The Moon, <em>within reach.</em></h1>
+      <p class="lead">Surreal photographs built around the real Moon and sky. Every element is photographed on location, then combined by hand. No AI.</p>
+      <div class="actions">
+        <a class="btn primary" href="#licensing">License an image</a>
+        <a class="btn" href="#work">See the work</a>
+      </div>
+      <p class="facts">
+        <span><b>Featured</b> in The Times, Metro and the Daily Mirror</span>
+        <span><b>Licensed</b> by Sanitas (Switzerland) and Localiza (Brazil)</span>
+        <span><b>Shared</b> by Instagram pages with 100M+ followers</span>
+      </p>
+    </div>
+    <figure>
+      <img src="img/daniel-antoniol-the-moon-thief-car-trunk.jpg" width="1280" height="1600" alt="Man loading the full Moon into the open trunk of a white car at dusk, surreal photograph by Daniel Antoniol" fetchpriority="high">
+      <figcaption><span>The Guy Who Stole the Moon</span><span>DA-03</span></figcaption>
+    </figure>
+  </header>
+</div>
+
+<section id="work">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">The Moon series</p>
+        <h2>Twenty-four moons</h2>
+      </div>
+      <p class="note">A selection from a larger archive. Every image has a reference code: quote it when you ask about a license.</p>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section id="surreal">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Sky &amp; surreal</p>
+        <h2>Without the Moon</h2>
+      </div>
+      <p class="note">Skies, clouds and impossible scenes, made the same way: photographed on location and combined by hand.</p>
+    </div>
+    <div class="grid" id="grid2"></div>
+    <div class="archive">
+      <p class="eyebrow">Full archive</p>
+      <p>This page shows 34 images. The full archive has more than 120, across both series, plus new work every year. Ask for the complete catalogue.</p>
+      <a class="btn" href="#licensing" id="cat">Request the catalogue</a>
+    </div>
+  </div>
+</section>
+
+<section id="method">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Method</p>
+        <h2>How a photo is made</h2>
+      </div>
+      <p class="note">Every element is photographed. Nothing is generated.</p>
+    </div>
+    <div class="steps">
+      <div><span class="n">IDEA</span><h3>Find the scene</h3><p>Ideas come from walking the countryside, looking at settings and everyday objects. This is the slowest part of the work.</p></div>
+      <div><span class="n">SHOOT</span><h3>Photograph scene and Moon</h3><p>The scene is staged and shot alone, with a tripod and a timer. The Moon is photographed in the same location, usually in the first minutes after it rises, when it looks largest.</p></div>
+      <div><span class="n">FINISH</span><h3>Combine by hand</h3><p>The photographs are combined and finished by hand into one image. Every license states that the image is a photo composite.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Daniel Antoniol</h2>
+    </div>
+    <div class="about-text">
+      <p>Daniel is from Cataguases, in Minas Gerais, Brazil, and lives in Rio de Janeiro. He began the series in 2020, during the pandemic, while working remotely from his parents' farm in the countryside, far from city light.</p>
+      <p>He works alone. He stages, shoots and edits every image himself, and the collection has grown every year since. Alongside the Moon series, he makes surreal images of sky and landscape.</p>
+      <blockquote>“Going to the Moon is an impossible dream. But through art, I can take people there with me.”<cite>Daniel Antoniol, Daily Star, 2022</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="published">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Published &amp; featured</p>
+        <h2>Where the work has been</h2>
+      </div>
+      <p class="note">Press in more than ten countries since 2022, and shared by some of the largest pages on Instagram. Below: the 2026 Sanitas book from Switzerland and two British newspapers from October 2022.</p>
+    </div>
+    <div class="sheets">
+      <figure><img src="img/sanitas-health-forecast-2026-page-267.jpg" width="788" height="1400" loading="lazy" alt="Sanitas Health Forecast 2026 book open at page 267, with a full-page Moon photograph by Daniel Antoniol beside the story"><figcaption>Sanitas Health Forecast · page 267 · 2026</figcaption></figure>
+      <figure><img src="img/sanitas-health-forecast-2026-cover.jpg" width="788" height="1400" loading="lazy" alt="Cover of the Sanitas Health Forecast 2026 book, Switzerland"><figcaption>Sanitas Health Forecast · Switzerland · 2026 edition</figcaption></figure>
+      <figure><img src="img/daily-mirror-moon-shots-2022.jpg" width="1101" height="1400" loading="lazy" alt="Daily Mirror page 3, 11 October 2022: feature titled Moon shots with six photographs by Daniel Antoniol"><figcaption>Daily Mirror · page 3 · 11 Oct 2022</figcaption></figure>
+      <figure><img src="img/daily-star-lunar-tricks-2022.jpg" width="1334" height="1400" loading="lazy" alt="Daily Star page 11, 11 October 2022: feature titled Lunar tricks with three photographs by Daniel Antoniol"><figcaption>Daily Star · page 11 · 11 Oct 2022</figcaption></figure>
+    </div>
+    <ul class="press">
+      <li><span class="w">Instagram</span><span class="d">Shared by Pubity (42M), Art Daily Dose (23M), The Trillionaire Life (13M), Complex (11M), Vacations (7M), Mídia Ninja (6M) and Fubiz.</span><span class="y">2021–2026</span><span></span></li>
+      <li><span class="w">Sanitas Health Forecast</span><span class="d">Full-page image opening a story, page 267, credited. Also licensed for the French edition.</span><span class="y">Switzerland · 2026</span><span></span></li>
+      <li><span class="w">Localiza</span><span class="d">Paid image licensing for brand content.</span><span class="y">Brazil</span><span></span></li>
+      <li><span class="w">International Photography Awards</span><span class="d">Honorable Mention, Fine Art Collage, for “The Guy Who Stole the Moon”.</span><span class="y">USA · 2022</span><a class="go" href="https://www.photoawards.com/winner/zoom.php?eid=8-1657122048-22" target="_blank" rel="noopener">View ↗</a></li>
+      <li><span class="w">The Times</span><span class="d">Selected for News in Pictures.</span><span class="y">UK · 2022</span><a class="go" href="https://www.thetimes.co.uk/article/news-in-pictures-tuesday-october-11-2022-s6357gr0v" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Metro</span><span class="d">Feature on the Moon series, picked up by news sites worldwide.</span><span class="y">UK · 2022</span><a class="go" href="https://metro.co.uk/2022/10/11/lunar-loving-artist-creates-mind-bending-photos-of-the-moon-17534780/" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Daily Mirror</span><span class="d">Page 3 feature, “Moon shots”.</span><span class="y">UK · 2022</span><a class="go" href="https://www.pressreader.com/uk/daily-mirror-northern-ireland/20221011/281530819924766" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Daily Star</span><span class="d">Print features, “Lunar tricks” (2022) and “Stunning glimpse of man ’n moon” (Daily Star Sunday, 2025).</span><span class="y">UK · 2022, 2025</span><span></span></li>
+      <li><span class="w">The Merit Times</span><span class="d">Feature with “Night Lantern”, “The Guy Who Stole the Moon” and “Holding On”.</span><span class="y">Taiwan · 2024</span><a class="go" href="https://www.merit-times.com.tw/NewsPage.aspx?unid=895213" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">CNN Arabic</span><span class="d">Feature interview about the work.</span><span class="y">Middle East · 2025</span><a class="go" href="https://arabic.cnn.com/style/article/2025/07/24/moon-photography-daniel-antoniol" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">A Day Magazine</span><span class="d">Feature on the series.</span><span class="y">Taiwan · 2022</span><a class="go" href="https://www.adaymag.com/2022/07/21/daniel-antoniol-moon.html" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Caracol TV</span><span class="d">Feature on the photographs.</span><span class="y">Colombia</span><a class="go" href="https://noticias.caracoltv.com/lomastrinado/este-fotografo-cumplio-el-sueno-de-miles-poner-la-luna-en-la-palma-de-su-mano-rg10" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Deník</span><span class="d">Photo feature.</span><span class="y">Czech Republic</span><a class="go" href="https://www.denik.cz/hobby/obrazem-dokonale-snimky-zariveho-mesice-urostly-brazilec-si-hraje-s-kompozici-21.html" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Diario Confluencia</span><span class="d">Feature on the series.</span><span class="y">Argentina</span><a class="go" href="https://www.diarioconfluencia.com.ar/el-fotografo-que-le-robo-la-luna-al-cielo-con-sus-propias-manos/" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Ma Ville à Moi</span><span class="d">Feature on the series.</span><span class="y">France</span><a class="go" href="https://www.mavilleamoi.fr/bordeaux/article/31992-le-creatif-daniel-antoniol-aime-visiblement-jouer-avec-la-lune" target="_blank" rel="noopener">Read ↗</a></li>
+      <li><span class="w">Türkeli</span><span class="d">News feature on the series.</span><span class="y">Turkey · 2024</span><span></span></li>
+      <li><span class="w">Record · Balanço Geral</span><span class="d">Live TV segment on the series.</span><span class="y">Brazil</span><span></span></li>
+      <li><span class="w">Publicitários Criativos</span><span class="d">Feature on the series.</span><span class="y">Brazil · 2025</span><span></span></li>
+      <li><span class="w">g1</span><span class="d">Report with tips for photographing the Moon.</span><span class="y">Brazil · 2023</span><a class="go" href="https://g1.globo.com/mg/zona-da-mata/noticia/2023/09/28/fotografo-mineiro-produz-fotos-incriveis-com-a-lua-e-da-dicas-para-o-clique-perfeito.ghtml" target="_blank" rel="noopener">Read ↗</a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="licensing">
+  <div class="wrap">
+    <div class="lic">
+      <div>
+        <p class="eyebrow">Licensing</p>
+        <h2 style="font-size:clamp(36px,5vw,60px)">Use these images</h2>
+        <ul class="uses">
+          <li><b>Editorial</b><span>Newspapers, magazines, online articles</span></li>
+          <li><b>Books</b><span>Interior pages and covers</span></li>
+          <li><b>Advertising</b><span>Campaigns, brand content, social media</span></li>
+          <li><b>Exhibitions</b><span>Shows, fine-art prints, installations</span></li>
+        </ul>
+        <ol class="how">
+          <li>Pick an image and note its code: DA-01 to DA-24 for the Moon series, DA-S01 to DA-S10 for sky &amp; surreal. Looking for something else? Ask for the full catalogue.</li>
+          <li>Tell me the use, territory, period and format.</li>
+          <li>I send a quote within 48 hours.</li>
+          <li>After agreement, you receive the full-resolution TIFF for print.</li>
+          <li>All images are photo composites made from my own photographs, and the license says so.</li>
+        </ol>
+      </div>
+      <div class="card">
+        <p class="eyebrow" style="color:var(--mute)">Contact</p>
+        <p class="email" id="email">dmantoniol@gmail.com</p>
+        <div class="row">
+          <a class="btn primary" id="mailBtn" href="mailto:dmantoniol@gmail.com?subject=Image%20licensing">Write an email</a>
+          <button class="btn" type="button" id="copyEmail">Copy email</button>
+          <a class="btn" href="https://www.instagram.com/daniel_antoniol/" target="_blank" rel="noopener">Instagram @daniel_antoniol</a>
+        </div>
+        <label for="msg">Message to send</label>
+        <textarea id="msg">Hi Daniel, I'd like to license an image.
+
+Image code (or "full catalogue"):
+Use (editorial, book, advertising, exhibition):
+Territory:
+Period:
+Format / size:</textarea>
+        <div class="row">
+          <a class="btn primary" id="sendMsg" href="#">Send by email</a>
+          <button class="btn" type="button" id="copyMsg">Copy message</button>
+          <span class="status" id="status" role="status"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer>
+    <span>&copy; 2026 Daniel Antoniol. All images are protected by copyright and may not be used without a license.</span>
+    <span>Rio de Janeiro, Brazil · <a href="https://www.instagram.com/daniel_antoniol/" rel="noopener">Instagram</a></span>
+  </footer>
+</div>
+
+<dialog id="lb" aria-label="Image viewer">
+  <div class="lb">
+    <div class="stage"><img id="lbImg" alt=""></div>
+    <div class="bar">
+      <div><span class="t" id="lbT"></span><span class="ref" id="lbR"></span></div>
+      <div class="row">
+        <button class="icon" type="button" id="prev" aria-label="Previous image">&larr;</button>
+        <button class="icon" type="button" id="next" aria-label="Next image">&rarr;</button>
+        <button class="btn primary" type="button" id="req">Request this image</button>
+        <button class="icon" type="button" id="close" aria-label="Close">&times;</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const T = {
+  sanitas:"Published in Sanitas Health Forecast 2026",
+  ipa:"IPA 2022 · Honorable Mention",
+  times:"The Times · 2022",
+  merit:"The Merit Times · 2024",
+  star:"Daily Star Sunday · 2025"
+};
+// [code, file, title, alt, w, h, tag]
+const moon = [
+  ["DA-03","the-moon-thief-car-trunk","The Guy Who Stole the Moon","Man loading the full Moon into the open trunk of a white car at dusk",1280,1600,T.ipa],
+  ["DA-17","every-phase-moon-cycle","Every Phase","Man with arms open under an arc of Moon phases, from crescent to full",1282,1600],
+  ["DA-01","the-keeper-moon-pipe","The Keeper","Man crouching on a concrete pipe, cradling the full Moon in his hands",1066,1600,T.sanitas],
+  ["DA-02","the-delivery-moon-wheelbarrow","The Delivery","Man pushing the full Moon in a wheelbarrow along the top of a brick wall",1280,1600,T.times],
+  ["DA-18","halo-full-moon","Halo","Portrait of a man with the full Moon glowing behind his head",1066,1600],
+  ["DA-19","night-lantern-moon","Night Lantern","Man holding an old lantern with the full Moon as its flame",1067,1600,T.merit],
+  ["DA-06","kick-up-moon-beach-rio","Kick-Up","Man on a Rio de Janeiro beach balancing the full Moon on his foot like a ball",1280,1600],
+  ["DA-20","runway-moon","Runway","Man with arms open on a long empty avenue, the full Moon rising at its end",1280,1600],
+  ["DA-04","moon-in-a-jar","Moon in a Jar","Man closing the lid of a glass jar with the full Moon inside",1280,1600],
+  ["DA-21","bedtime-story-crescent","Bedtime Story","Man reading on a wall under a huge crescent Moon, a dog asleep beside him",1098,1600],
+  ["DA-13","headlight-moon-bicycle","Headlight","Man walking a bicycle with the full Moon as its front wheel light",1066,1600],
+  ["DA-22","sea-crescent","Sea Crescent","Man sitting on a rock by the sea watching a thin crescent Moon set",1280,1600],
+  ["DA-10","moon-brew-coffee-cup","Moon Brew","Man holding a steaming mug with the Moon rising from it like a drink",1066,1600],
+  ["DA-23","cloud-coffee-moon","Cloud Coffee","Hand holding an enamel mug with a cloud and the Moon rising from it",1279,1600],
+  ["DA-05","changing-the-bulb-moon","Changing the Bulb","Man on a ladder screwing the full Moon into a string light socket",1066,1600],
+  ["DA-24","atlas-moon-lift","Atlas","Man seen from behind holding the full Moon above his head",1281,1600,T.star],
+  ["DA-08","night-shift-moon-shovel","Night Shift","Man standing on a concrete pipe lifting the full Moon with a shovel",1281,1600],
+  ["DA-09","reading-lamp-moon-tripod","Reading Lamp","Man reading on a wall beside a tripod topped by the full Moon like a lamp",1066,1600],
+  ["DA-12","holding-on-moon-embrace","Holding On","Man seen from behind, arm around the full Moon on the horizon",1067,1600],
+  ["DA-16","carry-on-moon-backpack","Carry-On","Man crouching on a wall with the full Moon packed in his backpack",1066,1600],
+  ["DA-07","the-catch-moon-net","The Catch","Man walking on a wall carrying the full Moon in a fishing net over his shoulder",1066,1600],
+  ["DA-11","the-crate-moon","The Crate","Silhouette of a man holding the full Moon in a wooden crate",1066,1600],
+  ["DA-14","groundwork-moon-hoe","Groundwork","Man on concrete pipes digging the rising Moon out of a hill with a hoe",1280,1600],
+  ["DA-15","make-a-wish-half-moon","Make a Wish","Man blowing on a half Moon held on a stem like a dandelion",1280,1600]
+];
+const surreal = [
+  ["DA-S01","swing-cloud","Swing","Man on a swing hanging from a single white cloud in a clear blue sky",1359,1600],
+  ["DA-S02","earth-bench","Earthrise","Couple on a park bench watching a giant Earth rise over the trees",1280,1600],
+  ["DA-S03","cloud-grower","Cloud Grower","Man sitting on a concrete pipe holding a tree whose leaves are clouds",1066,1600],
+  ["DA-S04","milky-way-night","Under the Milky Way","Man sitting on a terrace at night beneath the Milky Way",1280,1600],
+  ["DA-S05","pocket-galaxy","Pocket Galaxy","Man sitting inside a concrete pipe that opens onto a purple galaxy",1600,1600],
+  ["DA-S06","autumn-umbrella-pier","Let the Season Change","Man on a lake pier holding an umbrella that pours autumn leaves",1066,1600],
+  ["DA-S07","blue-planet-eye","Blue Planet","Black and white close-up of an eye whose iris is the planet Earth",1125,1406],
+  ["DA-S08","portal-pipe","Portal","Man reaching into a concrete pipe that opens onto deep space",1280,1600],
+  ["DA-S09","ghost-chair","Ghost Chair","An empty armchair under a white sheet that seems to sit by itself",1066,1600],
+  ["DA-S10","framed-pier","Framed","Hand holding an empty phone frame that turns a lake pier into a picture",1280,1600]
+];
+const photos = moon.concat(surreal);
+function plate(p, i){
+  return `<button class="plate" type="button" data-i="${i}">
+     <img src="img/daniel-antoniol-${p[1]}.jpg" width="${p[4]}" height="${p[5]}" loading="${i < 6 ? "eager" : "lazy"}" alt="${p[3]}, photograph by Daniel Antoniol">
+     <span class="cap"><span class="t">${p[2]}</span><span class="ref">${p[0]}</span></span>${p[6] ? `<span class="tag">${p[6]}</span>` : ""}
+   </button>`;
+}
+const grid = document.getElementById("grid"), grid2 = document.getElementById("grid2");
+grid.innerHTML = moon.map((p, i) => plate(p, i)).join("");
+grid2.innerHTML = surreal.map((p, i) => plate(p, i + moon.length)).join("");
+
+const lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg");
+let cur = 0;
+function show(i){
+  cur = (i + photos.length) % photos.length;
+  const p = photos[cur];
+  lbImg.src = `img/daniel-antoniol-${p[1]}.jpg`;
+  lbImg.alt = p[3];
+  document.getElementById("lbT").textContent = p[2];
+  document.getElementById("lbR").textContent = p[0];
+}
+function openPlate(e){
+  const b = e.target.closest(".plate"); if (!b) return;
+  show(+b.dataset.i);
+  if (lb.showModal) lb.showModal(); else lb.setAttribute("open", "");
+}
+grid.addEventListener("click", openPlate);
+grid2.addEventListener("click", openPlate);
+document.getElementById("prev").onclick = () => show(cur - 1);
+document.getElementById("next").onclick = () => show(cur + 1);
+document.getElementById("close").onclick = () => lb.close();
+lb.addEventListener("click", e => { if (e.target.classList.contains("stage")) lb.close(); });
+document.addEventListener("keydown", e => {
+  if (!lb.open) return;
+  if (e.key === "ArrowLeft") show(cur - 1);
+  if (e.key === "ArrowRight") show(cur + 1);
+});
+document.getElementById("req").onclick = () => {
+  const p = photos[cur];
+  document.getElementById("msg").value =
+`Hi Daniel, I'd like to license ${p[0]} (${p[2]}).
+
+Use (editorial, book, advertising, exhibition):
+Territory:
+Period:
+Format / size:`;
+  lb.close();
+  document.getElementById("licensing").scrollIntoView();
+  document.getElementById("msg").focus({preventScroll:true});
+};
+
+document.getElementById("cat").onclick = () => {
+  document.getElementById("msg").value =
+`Hi Daniel, I'd like to see your full catalogue.
+
+Use (editorial, book, advertising, exhibition):
+Subject or theme I'm looking for:
+Territory:
+Period:`;
+};
+
+const status = document.getElementById("status");
+function copy(text, el, okMsg){
+  const done = () => { status.textContent = okMsg; setTimeout(() => status.textContent = "", 2500); };
+  try {
+    navigator.clipboard.writeText(text).then(done, () => select(el));
+  } catch (_) { select(el); }
+}
+function select(el){
+  if (el.select) { el.select(); }
+  else { const r = document.createRange(); r.selectNodeContents(el); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  status.textContent = "Selected. Press copy on your keyboard.";
+}
+document.getElementById("copyEmail").onclick = () => copy("dmantoniol@gmail.com", document.getElementById("email"), "Email copied.");
+document.getElementById("sendMsg").onclick = e => { e.preventDefault(); const m = document.getElementById("msg").value; location.href = "mailto:dmantoniol@gmail.com?subject=" + encodeURIComponent("Image licensing") + "&body=" + encodeURIComponent(m); };
+document.getElementById("copyMsg").onclick = () => { const m = document.getElementById("msg"); copy(m.value, m, "Message copied."); };
+</script>
+</body>
+</html>
